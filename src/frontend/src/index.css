@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Satoshi";
+    --font-body: "Plus Jakarta Sans";
+    --font-mono: monospace;
+    --radius: 0.625rem;
+
+    --background: 0.16 0.02 280;
+    --foreground: 0.95 0.01 280;
+    --card: 0.2 0.025 280;
+    --card-foreground: 0.95 0.01 280;
+    --popover: 0.2 0.025 280;
+    --popover-foreground: 0.95 0.01 280;
+
+    --primary: 0.65 0.25 300;
+    --primary-foreground: 0.98 0.005 300;
+
+    --secondary: 0.25 0.03 280;
+    --secondary-foreground: 0.85 0.01 280;
+    --muted: 0.25 0.03 280;
+    --muted-foreground: 0.55 0.015 280;
+
+    --accent: 0.75 0.18 55;
+    --accent-foreground: 0.16 0.02 55;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.3 0.025 280;
+    --input: 0.3 0.025 280;
+    --ring: 0.65 0.25 300;
+
+    --chart-1: 0.65 0.22 40;
+    --chart-2: 0.6 0.12 185;
+    --chart-3: 0.4 0.07 227;
+    --chart-4: 0.83 0.19 84;
+    --chart-5: 0.77 0.19 70;
+
+    --sidebar: 0.2 0.025 280;
+    --sidebar-foreground: 0.95 0.01 280;
+    --sidebar-primary: 0.65 0.25 300;
+    --sidebar-primary-foreground: 0.98 0.005 300;
+    --sidebar-accent: 0.75 0.18 55;
+    --sidebar-accent-foreground: 0.16 0.02 55;
+    --sidebar-border: 0.3 0.025 280;
+    --sidebar-ring: 0.65 0.25 300;
+  }
+
+  .dark {
+    --background: 0.16 0.02 280;
+    --foreground: 0.95 0.01 280;
+    --card: 0.2 0.025 280;
+    --card-foreground: 0.95 0.01 280;
+    --popover: 0.2 0.025 280;
+    --popover-foreground: 0.95 0.01 280;
+
+    --primary: 0.65 0.25 300;
+    --primary-foreground: 0.98 0.005 300;
+
+    --secondary: 0.25 0.03 280;
+    --secondary-foreground: 0.85 0.01 280;
+    --muted: 0.25 0.03 280;
+    --muted-foreground: 0.55 0.015 280;
+
+    --accent: 0.75 0.18 55;
+    --accent-foreground: 0.16 0.02 55;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.145 0 0;
+
+    --border: 0.3 0.025 280;
+    --input: 0.3 0.025 280;
+    --ring: 0.65 0.25 300;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.27 304;
+    --chart-5: 0.65 0.25 16;
+
+    --sidebar: 0.2 0.025 280;
+    --sidebar-foreground: 0.95 0.01 280;
+    --sidebar-primary: 0.65 0.25 300;
+    --sidebar-primary-foreground: 0.98 0.005 300;
+    --sidebar-accent: 0.75 0.18 55;
+    --sidebar-accent-foreground: 0.16 0.02 55;
+    --sidebar-border: 0.3 0.025 280;
+    --sidebar-ring: 0.65 0.25 300;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--primary)) 0%,
+      oklch(var(--accent)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 2px 12px 0 oklch(var(--foreground) / 0.08);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.logo-transparent {
+  mix-blend-mode: screen;
+  filter: contrast(1.1);
+}
+
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.font-playfair-italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}

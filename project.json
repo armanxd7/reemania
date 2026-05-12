@@ -1,0 +1,22 @@
+{
+  "overview": "Reemania is a professional web design and development agency website built to attract and convert client leads. It showcases services, portfolio case studies, client testimonials, and an inquiry form — all in a modern, visually polished layout.",
+  "features": [
+    "Hero section with agency tagline and CTA",
+    "Services overview cards",
+    "Portfolio grid with case study detail views",
+    "Client testimonials carousel",
+    "Contact/inquiry form with validation",
+    "Fully responsive on mobile and desktop",
+    "Smooth animations and visual polish"
+  ],
+  "category": "agency",
+  "tags": [
+    "agency",
+    "portfolio",
+    "web-design",
+    "development",
+    "showcase",
+    "landing-page"
+  ],
+  "last_updated": "2026-05-10T13:47:38.621Z"
+}
